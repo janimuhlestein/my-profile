@@ -1,0 +1,350 @@
+:root {
+    --primary-color: #024e76;
+    --secondary-color: #FF3633;
+    --blue: #4233FF;
+    --ltblue: #3390FF;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+/*Set up general padding*/
+*Give the basic information for the body*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+/*Set up the side text settings for h2 these can be overriden as needed*/
+
+
+/*Let's setup the header*/
+header {
+    padding: 20px 35px;
+    display: flex;
+    flex-wrap: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 150px;
+    background-image: url(../images/peony2.jpg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    z-index: 90000;
+}
+
+/*I want a fun font for my name*/
+header h1 {
+    display: flex;
+    font-family: fantasy;
+    color: var(--ltblue);
+    font-size: 40px;
+    font-weight:bold;
+    text-shadow: 1px 1px 2px black;
+    margin: 15px 0 0 0;
+}
+
+/*Let's set up the a styles*/
+header a {
+    text-decoration: none;
+    color: var(--ltblue);
+}
+
+/*Set up the nav*/
+header nav {
+    margin: 7px 0;
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+}
+
+/*I want it flexible*/
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+/*Make it flexible and mmake it pretty*/
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 20px;
+    text-shadow:  1px 1px 2px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/*Set up general padding*/
+section {
+    margin: 30px;
+}
+
+/*I want to make the hero fun, so let's extend the header image*/
+.hero {
+    background-image: url(../images/peony2.jpg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+/*I want to give my raison detre for why I'm doing this make it white with shadow*/
+.hero-text {
+    width: 35%;
+    text-align: left;
+    margin: 3.5%;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Make the hader blue with text shadow*/
+.hero-text h2 {
+    color: var(--secondary-color);
+    text-align: left;
+    font-size: 35px;
+    text-shadow:  1px 1px 2px black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Obviously this isn't me, but I don't have anything better at this moment...*/
+.me-image {
+    background-image: url(../images/mary.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: white;
+    background-color: var(--primary-color);
+    text-shadow: 1px 1px 2px black;
+    margin: 7px 0;
+    position: absolute;
+    bottom: 250px;
+    right: 2%;
+}
+
+/* Set up the projects section */
+.projects {
+    display: flex;
+    margin: 10%;
+}
+
+.projects h2 {
+   display: flex;
+   align-items: center;
+    margin-left: 20px;
+    border-right: 2px solid red;
+    padding-right: 15px;
+}
+
+/* Add in a css grid for the projects */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-left: 60px;   
+}
+
+.grid-item {
+    display: flex;
+    background-color: burlywood;
+    padding: 20px;
+    border: 2px solid blue;
+    max-width: 400px;
+}
+
+.grid-item:nth-child(n+2):hover {
+    opacity: 0.3;
+}
+
+.image-text {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 24;
+    padding: 5px;
+}
+
+.grid-item:nth-child(2) {
+    background-image: url(../images/flowers.jpg);
+    background-size: cover;
+    color: red;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.grid-item:nth-child(3) {
+    background-image: url(../images/lake.jpg);
+    background-size: cover;
+    color: red;
+}
+
+/* Make the run-buddy larger, because it's all I have at this moment */
+.grid-item:nth-child(1) {
+grid-column-start: 1;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+ /* Add in the run-buddy iframe */
+.grid-item:nth-child(1) iframe {
+    display: flex;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    margin-left: -110px;
+}
+
+.grid-item:nth-child(4) {
+    background-image: url(../images/trail.jpg);;
+    background-size: cover;
+    color: red;
+    
+}
+
+.grid-item:nth-child(5) {
+    background-image: url(../images/desert.jpg);
+    background-size: cover;
+    color: red;
+}
+
+.grid-item:nth-child(6) {
+    background-image: url(../images/antelope-canyon-457495_1920.jpg);
+    background-size: cover;
+    color: red;
+}
+
+/* Add in some text to go over run-buddy */
+.text a {
+    display: flex;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:white;
+    text-shadow: 1px 2px  black;
+    text-decoration: none;
+    padding-left: 10px;
+    z-index: 3000;
+}
+
+/*  When we hover over it, show a background, so they know to click */
+.text a:hover{
+    background-color:blue;
+    border-radius: 10px;
+}
+
+/* Setup the about-me section */
+.about-me {
+    display: flex;
+    margin: 10%;
+    flex-wrap: wrap;
+
+}
+
+.about-me h2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 20px;
+    border-right: 2px solid red;
+    padding-right: 35px;
+}
+
+.about-text {
+    align-items: center;
+    padding-left: 35px;
+}
+
+.about-text p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+/* Set up the links section */
+.my-links {
+        display: flex;
+        margin: 10%;
+        flex-wrap: wrap;
+}
+    
+ .my-links h2 {
+       display: flex;
+       align-items: center;
+        margin-left: 20px;
+        border-right: 2px solid red;
+        padding-right: 50px;
+    }
+
+.links a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.my-links .links {
+    margin: 7px 0;
+}
+
+/*I want it flexible*/
+.my-links .links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+/*Make it flexible and mmake it pretty*/
+.my-links .links ul li a {
+    padding: 10px 15px;
+    font-size: 20px;
+    text-shadow:  1px 1px 2px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* We'll need a footer */
+
+footer {
+    background-image: url(../images/red-peonies.jpg);
+    background-size: cover;
+    padding:5px;
+}
+
+footer h3 {
+    font-weight: lighter;
+    font-size: 20px;
+    color: var(--secondary-color);
+    text-shadow:  1px 1px 2px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
