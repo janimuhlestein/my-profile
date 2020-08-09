@@ -6,6 +6,6 @@ The profile of my projects, information, and links
 3. Hero has an image, and a basic statement.
 4. About me section.
 5. My projects section, with an iframe to Run Buddy, and five stubs with fadeouts.
-6. My links section, with links to github and linkedin.
-7. Footer, with name and email, and a backgound image.
+6. My links section, with links to email, github and linkedin.
+7. Footer, with copyright, name, and a backgound image.
 8. Responsiveness for different screen sizes--in case flex isn't enough.
