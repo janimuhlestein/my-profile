@@ -97,6 +97,7 @@ section {
     margin: 0;
     padding-top: 60px;
     padding-bottom: 30px;
+    align-items: center;
 }
 
 /*I want to give my raison detre for why I'm doing this make it white with shadow*/
