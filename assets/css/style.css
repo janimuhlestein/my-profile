@@ -86,6 +86,7 @@ section {
 
 /*I want to make the hero fun, so let's extend the header image*/
 .hero {
+    display: flex;
     background-image: url(../images/peony2.jpg);
     background-size: cover;
     background-position: 80%;
@@ -93,7 +94,6 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: flex-start; 
     margin: 0;
     padding-top: 60px;
     padding-bottom: 30px;
@@ -134,16 +134,14 @@ section {
 }
 
 .logo {
-    display: flex;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     color: white;
     background-color: var(--primary-color);
     text-shadow: 1px 1px 2px black;
     margin: 7px 0;
-    position: absolute;
-    bottom: 250px;
-    right: 2%;
+    align-self: flex-end;
+    margin-left: 50px;
 }
 
 /* Set up the projects section */
