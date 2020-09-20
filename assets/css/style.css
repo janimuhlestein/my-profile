@@ -189,7 +189,7 @@ section {
 }
 
 .grid-item:nth-child(2) {
-    background-image: url(../images/flowers.jpg);
+   background-color: burlywood;
     background-size: cover;
     color: red;
     opacity: 1;
@@ -219,7 +219,7 @@ align-content: center;
     z-index: 1;
     width: auto;
     height: auto;
-    margin-left: -110px;
+    margin-left: -240px;
 }
 
 .grid-item:nth-child(4) {
